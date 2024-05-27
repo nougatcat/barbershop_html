@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto&family=Yeseva+One&display=swap" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Парикмахерская</title>
+</head>
+<body>
+    <header>
+        <div class="content">
+            <!--   nav - same as div -->
+            <nav class="navigation">
+                <img src="./images/head-logo.png" alt="logo" class="navigation__logo">
+
+
+                <input type="checkbox" class="navigation__toggle" id="toggle">
+                <label for="toggle" class="navigation__label">
+                    <div>
+                    </div>
+                </label>
+
+
+                <div class="navigation__menu">
+                    <a class="navigation__element" href="#">Главная</a>
+                    <a class="navigation__element" href="#">О нас</a>
+                    <a class="navigation__element" href="#">Услуги</a>
+                    <a class="navigation__element" href="#">Акции</a>
+                    <a class="navigation__element" href="#">Команды</a>
+                    <a class="navigation__element" href="#">Отзывы</a>
+                    <a class="navigation__element" href="#">Контакты</a>
+                </div>
+            </nav>
+
+            <div class="head">
+                <div class="head__data">
+                    <div class="head__name">Первая парикмахерская</div>
+                    <div class="head__tagline">Ваши волосы — наш холст</div>
+                    <div class="head__deception">На каждую 5-ю стрижку 50%</div>
+                    <!-- <div class="head__girl"></div> -->
+                    <a class="button" href="#">Записаться</a>
+                </div>
+                <img src="./images/head-girl.png" alt="girl" class="head__image">
+            </div>
+        </div>
+    </header>
+    <main>        
+        <div class="content">
+            <div class="about">
+                <img src="./images/about-room.png" alt="about" class="about__image">
+                <div class="about__content">
+                    <div class="title about__title">
+                        О нас
+                    </div>
+                    <div class="about__text">
+                        Первая парикмахерская - уютный салон 
+                        красоты, в котором вы сможете создать 
+                        оригинальный образ и подчеркнуть свой 
+                        стиль. В нашу команду входят 
+                        высокопрофессиональные стилисты, 
+                        визажисты и мастера ногтевого сервиса.
+                    </div>
+                    <!-- <ul class="about__benefits">
+                        <li class="about__element">Индивидуальный подход</li>
+                        <li class="about__element">Комофорт</li>
+                        <li class="about__element">Безопасность</li>
+                        <li class="about__element">Качество</li>
+                    </ul> --> <!--старый вариант со списком не подходит для мобилки-->
+                    <div class="about__benifits">
+                        <div class="about__element">Индивидуальный подход</div>
+                        <div class="about__description">
+                            Мы подберем индивидуальные для вас и вы получите рекомендации по салонному и домашнему уходу.
+                        </div>
+
+                        <div class="about__element">Комофорт</div>
+                        <div class="about__description">В салоне есть бесплатный wi-fi, удобная зона ожидания и бесплатная паркорка
+                        </div>
+
+                        <div class="about__element">Безопасность</div>
+                        <div class="about__description">Мы соблюдаем санитарные нормы и выдаем средства индивидуальной защиты
+                        </div>
+
+                        <div class="about__element">Качество</div>
+                        <div class="about__description">Мы работаем только на качественном оборудовании, весь персонал сертифицирован
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="services">
+                <div class="title services__title">Услуги</div>
+                <div class="services__categories">
+                    <div class="services__category">— Ногтевой сервис</div>
+                    <div class="services__category"> — Оформление бровей</div>
+                    <div class="services__category">—  Парикмахерские услуги</div>
+                </div>
+                <div class="services__options">
+                    <div class="services__option">Маникюр</div>
+                    <div class="services__option">Педикюр</div>
+                    <hr class="services__line">
+                </div>
+                <div class="services__prices">
+                    <div class="services__list">
+                        <div class="services__element">
+                            <div class="services__name">Маникюр без покрытия</div>
+                            <div class="services__price">1000</div>
+                        </div>
+                        <div class="services__element">
+                            <div class="services__name">Маникюр, покрытие лак</div>
+                            <div class="services__price">1800</div>
+                        </div>
+                        <div class="services__element">
+                            <div class="services__name">Маникюр, однотонное покрытие гель-лак</div>
+                            <div class="services__price">2500</div>
+                        </div>
+                        <div class="services__element">
+                            <div class="services__name">Маникюр, наращивание ногтей</div>
+                            <div class="services__price">3500</div>
+                        </div>
+                        <div class="services__element">
+                            <div class="services__name">Маникюр, коррекция нарощенных ногтей</div>
+                            <div class="services__price">2300</div>
+                        </div>
+                        <div class="services__element">
+                            <div class="services__name">Укрепление акриловой пудрой</div>
+                            <div class="services__price">600</div>
+                        </div>
+                        <div class="services__element">
+                            <div class="services__name">Снятие покрытия</div>
+                            <div class="services__price">300</div>
+                        </div>
+                        <div class="services__element">
+                            <div class="services__name">Ремонт одного ногтя</div>
+                            <div class="services__price">400</div>
+                        </div>
+                        <div class="services__element">
+                            <div class="services__name">Дизайн одного ногтя</div>
+                            <div class="services__price">от 150</div>
+                        </div>
+                        <div class="services__element">
+                            <div class="services__name">Парафинотерапия</div>
+                            <div class="services__price">700</div>
+                        </div>
+                        <div class="services__element">
+                            <div class="services__name">Массаж рук</div>
+                            <div class="services__price">300</div>
+                        </div>
+                    </div>
+                    <img class="services__image" src="./images/services-image.png" alt="services">
+                </div>
+            </div>
+
+
+
+            <!--акции-->
+            <div class="stock">
+                <img src="./images/stock-image.png" alt="" class="stock__image">
+                <div class="stock__info">
+                    <div class="title stock__title">Акции</div>
+                    <!-- <ul class="stock__discount">
+                        <li class="stock__element">Скидка на маникюр - 20%</li>
+                        <li class="stock__element">Скидка в день рождения -15%</li>
+                        <li class="stock__element">Скидка на отзыв</li>
+                    </ul> -->
+                    <div class="stock__discount">
+                        <div class="stock__element">Скидка на маникюр - 20%</div>
+                        <div class="stock__element">Скидка в день рождения -15%</div>
+                        <div class="stock__element">Скидка на отзыв</div>
+                    </div>
+                    <a href="#" class="button" href="#">Записаться</a>
+                </div>
+            </div>
+
+
+
+
+            <div class="crew">
+                <div class="title crew__title">Команда</div>
+                <div class="crew__list">
+                    <div class="crew__element">
+                        <img src="./images/crew-1.png" alt="" class="crew__image">
+                        <div class="crew__name">Мухина Алиса</div>
+                        <div class="crew_profession">Мастер маникюра</div>
+                    </div>
+                    <div class="crew__element">
+                        <img src="./images/crew-2.png" alt="" class="crew__image">
+                        <div class="crew__name">Осипова Вероника</div>
+                        <div class="crew_profession">Парикмахер</div>
+                    </div>
+                    <div class="crew__element">
+                        <img src="./images/crew-3.png" alt="" class="crew__image">
+                        <div class="crew__name">Бирюкова Юлия</div>
+                        <div class="crew_profession">Бровист</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- отзывы -->
+            <div class="review">
+                <div class="title review_title">Отзывы</div>
+
+                <div class="review__grid">
+                    <img src="./images/review-1.png" alt="arthur" class="review__image">
+                    <div class="review__name">Артур Бараничев</div>
+                    <div class="review__text">Стрижемся , всей семьей уже порядка 8 лет . Все устраивает , мастера всегда входят в положение . И делают все чтоб было комфортно и удобно . За 8 лет ни разу ни каких проблем не возникало</div>
+                </div>
+
+                <div class="review__grid">
+                    <img src="./images/review-2.png" alt="lily" class="review__image">
+                    <div class="review__name">Лилия Сергеева</div>
+                    <div class="review__text">По совету подруги пришла в первую парикмахерскую. Очень довольна! Спасибо мастеру, все мои пожелания были учтены. Волосы в прекрасном состоянии. Сделали уход. Я в восторге от цвета волос и стрижки. Цена приятно удивила. Спасибо за маникюр. Приду ещё не раз</div>
+                </div>
+
+                <div class="review__grid">
+                    <img src="./images/review-3.png" alt="ivan" class="review__image">
+                    <div class="review__name">Иван Соколов</div>
+                    <div class="review__text">Выражаю благодарность моему самому лучшему парикмахеру Веронике. Мастер не просто креативная, но действительно видит, что нужно клиенту. Не посоветует что попало, и сделает все на высшем уровне.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="content">
+            <div class="footer">
+                <img src="./images/footer-map.png" alt="" class="footer__map">
+                <div class="footer__info">
+                    <div class="title footer__title">Контакты</div>
+                    <div class="footer__subtitle">Адрес:</div>
+                    <div class="footer__text">г. Люберцы<br>
+                        Октябрьский проспект д. 145<br>
+                        вход  с торца здания</div>
+                    <div class="footer__subtitle">Режим работы:</div>
+                    <div class="footer__text">ежедневно, 10:00–21:00</div>
+                    <div class="footer__title">Номер телефона:</div>
+                    <div class="footer__text">+7 (915) 036-32-01</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

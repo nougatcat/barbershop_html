@@ -1,0 +1,45 @@
+.stock {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 287px;
+    column-gap: 80px;
+
+    &__image {
+        border-radius: 20px;
+    }
+
+    &__info {
+        flex-grow: 1;
+
+    }
+
+    &__title {
+        margin-bottom: 45px;
+    }
+
+    &__discount {
+        font-weight:300;
+        letter-spacing: 0.02em;
+    }
+
+    &__element {
+        margin-bottom: 40px;
+        padding-left: 8px;
+        // position: relative;
+        width: 588px;
+        line-height: 45px;
+        background: rgba(248, 157, 136, 0.25);
+        border-radius: 20px;
+    }
+    //! MOBILE
+    @media screen and (max-width: $mediasize) {
+        &__image {
+            display:none;
+        }
+        &__element {
+            width:initial;
+            line-height: 33px;
+            padding-left: 19px;
+        }
+    }
+}

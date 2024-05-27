@@ -1,0 +1,421 @@
+/* font-family: 'Inter', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Yeseva One', cursive; */
+
+*, 
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* то же самое, что define в c++ */
+:root { /*задаем цвет фона*/
+    --mainback: #faeee9;
+}
+
+
+
+body {
+    font: 400 24px 'Inter', sans-serif;
+}
+
+header {
+    background-color: #f9e3d3;
+    min-height: 100px;
+    padding-bottom: 178px;
+}
+
+main {
+    background-color: var(--mainback);
+    min-height: 100px;
+    padding-top: 145px;
+    padding-bottom: 95px;
+}
+
+footer {
+    background-color: #f9e3db;
+    min-height: 100px;
+    padding-top: 134px;
+    padding-bottom: 90px;
+}
+
+.content {
+    max-width: 1067px;
+    margin: 0 auto;
+}
+
+
+/*! заголовки разделов */
+.title {
+    font: 400 43px 'Yeseva One';
+    letter-spacing: 0.15em;
+}
+
+
+/*! Buttton */
+.button-enroll {
+    display: inline-block;
+    width: 270px;
+    line-height: 59px;
+    background: #F89D88;
+    text-align: center;
+    border-radius: 30px;
+    color:#f9e3db;
+    text-transform: uppercase; /*КАПСОМ ПИШЕТСЯ*/
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+/*! заголовок */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*по вертикали */
+    margin-bottom: 97px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f89d88;
+    text-shadow: 3px 3px 4px rgba(235, 121, 121, 0.2);
+}
+
+nav img {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+/*...................................................  */
+
+
+
+.header-block {
+    color: #2c1708;
+    position: relative; /*чтобы __girl была absolute относительно своего родителя, а не всего документа*/
+}
+
+.header-block >div:not(:last-of-type) { /* все дочерние дивы, кроме последнего */
+    width: 513px;
+    letter-spacing: 0.15em;
+}
+
+
+.header-block__name {
+    font-family: 'Yeseva One';
+    font-size: 45px;
+    line-height: 53px;
+    margin-bottom: 28px;
+}
+.header-block__tagline {
+    font-size: 30px;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+}
+.header-block__deception {
+    font-size: 22px;
+    margin-bottom: 55px;
+
+}
+
+.header-block .header-block__girl { /*длинный параметр чтобы перебить >div:not, который задает ширину*/
+    position: absolute;
+    top:0;
+    right:85px;
+    width: 353px !important;
+    height: 353px;
+    /* border: 1px solid black; */
+    background: url(../images/head-girl.png);
+    border-radius: 50%;
+}
+
+.header-block__girl::before {
+    display: inline-block;
+    position: relative;
+    top:-35%;
+    left:50%;
+    /* border: 1px solid black; */
+    content: "";
+    width: 235px;
+    height: 290px;
+    background: url('../images/head-fig.png');
+}
+
+.header-block__girl::after {
+    display:inline-block;
+    position: relative;
+    top:-35%;
+    left:-10%;
+    content:"";
+    width: 235px;
+    height: 290px;
+    background: url('../images/head-fig.png');
+    transform:rotate(180deg);
+
+}
+
+/*......................*/
+
+/*! MAIN PART*/
+
+/*? о нас  */
+.about-block {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 273px;
+}
+.about-block__image {
+    background: url("../images/about-room.png");
+    min-width: 520px;
+    height: 465px;
+    border-radius: 20px;
+}
+.about-block__content {
+    width: 507px;
+}
+
+.about-block__content .title {
+    margin-bottom: 31px;
+}
+
+.about-block__text {
+    font-weight:300;
+    margin-bottom: 48px;
+}
+.about-block__benefits {
+    list-style: none;
+
+}
+
+.about-block__benefits li {
+    position: relative;
+    padding-left: 31px;
+    margin-bottom: 10px;
+}
+
+.about-block__benefits li::before { /*кружки*/
+    content:"";
+    width:19px;
+    height: 19px;
+    background: #807979;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%); /**/
+
+}
+
+/*? услуги  */
+
+
+.services {
+    margin-bottom: 266px;
+}
+
+/* [class^="services"] {
+
+} */
+
+.services__categories {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 53px;
+    letter-spacing: 0.15em;
+    padding-top: 12px;
+    margin-bottom: 10px;
+}
+
+.services__category {
+}
+.services__options {
+    display:flex;
+    margin-bottom:10px;
+
+    font-size: 20px;
+    line-height: 33px;
+    letter-spacing: 0.15em;
+    align-items: flex-end;
+    
+}
+.services__options > div {
+    border-bottom: 1px solid black;
+    box-shadow: 0px 4px 4px -3px rgba(0,0,0,0.25);
+}
+.services__option {
+    flex-basis: 150px; /*размер флек элемента по основной оси*/
+    /* чтобы сделать отступ между маникюром и педикюром */
+}
+.services_prices {
+    display: flex;
+    justify-content: space-between;
+}
+.services__list {
+    flex-grow:1;
+    align-self: center;
+}
+.services__element {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 0.65em;
+    gap: 0;
+    position: relative;
+}
+
+.services__element::before { /*точечки */
+    content:"";
+    position:absolute; /*относительно services__element */
+    left:0;
+    bottom:0.21em;
+    width:100%;
+    border-bottom: 1px dashed black;
+}
+
+.services__name {
+    background: var(--mainback); /*поменяет цвет точек, чтобы они слились с фоном*/
+    z-index:1; /*переместит вперед (увеличит приоритет на псевдоэл-том)*/
+    padding-right: 5px;
+}
+.services_price {
+    font-weight: 700;
+    padding-right: 20px;
+    padding-left: 5px;
+    background: var(--mainback); /*поменяет цвет точек, чтобы они слились с фоном*/
+    z-index:1; /*переместит вперед (увеличит приоритет на псевдоэл-том)*/
+}
+.services_price::after {
+    content: "₽";
+}
+.services-image {
+}
+
+/*? акции  */
+.stock {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 287px;
+}
+.stock__image {
+    border-radius: 20px;
+}
+.stock__info {
+    flex-grow: 1;
+    padding-left: 80px;
+}
+.stock__discount {
+    font-size: 24px;
+    font-weight:300;
+    letter-spacing: 0.02em;
+    padding-top:45px;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+
+.stock__discount li {
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 8px;
+}
+
+.stock__discount li::before {
+    content:"";
+    position: absolute;
+    width: 588px;
+    height: 45px;
+    background: rgba(248, 157, 136, 0.25);
+    border-radius: 20px;
+    bottom:-0.4em;
+    left:0;
+    z-index:0;
+}
+
+/* ?команда (crew) */
+
+.crew {
+    margin-bottom: 283px;
+}
+
+.crew__list {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    padding-top: 57px;
+
+}
+.crew__element {
+
+}
+.crew__image {
+    border-radius: 50%;
+
+    margin-bottom: 36px;
+}
+.crew__name {
+}
+.crew_profession {
+    font-size: 22px;
+}
+
+/* ? отзывы */
+
+.review {
+    
+}
+
+.review .title {
+    margin-bottom: 46px;
+}
+
+.review__grid {
+    display: grid;
+    grid-template: 29px 1fr / 135px 1fr;
+    grid-template-areas: 
+    "image name"
+    "image text";
+    margin-bottom: 36px;
+    column-gap: 28px;
+}
+.review__image {
+    grid-area: image;
+}
+.review__name {
+    grid-area: name;
+    font-weight: 500;
+
+}
+.review__text {
+    grid-area: text;
+}
+
+/*! footer */
+
+
+.footer {
+    display:flex;
+}
+.footer__map {
+}
+.footer__info {
+    font-size: 26px;
+    padding-left: 20px;
+}
+
+.footer__info .title {
+    margin-top: 32px;
+}
+.footer__title {
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+.footer__text {
+    font-weight: 300;
+    margin-bottom: 1.5em;
+}

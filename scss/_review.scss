@@ -1,0 +1,46 @@
+.review {
+
+    &__grid {
+        display: grid;
+        grid-template: 29px 1fr / 135px 1fr;
+        grid-template-areas: 
+        "image name"
+        "image text";
+        margin-bottom: 36px;
+        column-gap: 28px;
+    }
+
+    &__image {
+        grid-area: image;
+    }
+
+    &__name {
+        grid-area: name;
+        font-weight: 500;    
+    }
+
+    &__text {
+        grid-area: text;
+    }
+
+    &_title {
+        margin-bottom: 46px;
+    }
+
+//! MOBILE
+    @media screen and (max-width: $mediasize) {
+        //$image-size: 108px; //sass не работает, если в grid-template добавить переменную, потому что думает, что это деление
+        font-size: 1rem; //18px
+        &__grid {
+            grid-template: 108px 1fr / 108px 1fr;
+            grid-template-areas:"image name" "text text" ;
+        }
+        &__image {
+            width:100%;
+            height:100%;
+        }
+        &__name {
+            align-self: center;
+        }
+    }
+}

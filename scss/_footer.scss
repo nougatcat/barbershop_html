@@ -1,0 +1,38 @@
+.footer {
+    display:flex;
+    column-gap: 20px;
+
+    &__map {
+    }
+
+    &__info {
+        font-size: 26px;
+        
+    }
+
+
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        margin-bottom: 0.5em;
+    }
+
+    &__text {
+        font-weight: 300;
+        margin-bottom: 1.5em;
+    }
+    @media screen and (max-width: $mediasize) {
+        &__map{
+            display:none;
+        }
+        &__subtitle{
+
+        }
+        &__info{
+            font-size: 15px;
+        }
+    }
+}

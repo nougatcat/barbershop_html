@@ -1,0 +1,91 @@
+.about {
+
+
+    $listpadding: 31px;
+
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 273px;
+    column-gap: 1.29166rem;
+
+    &__image {
+        border-radius: 20px;
+    }
+
+    &__content {
+        width: 507px;
+    }
+
+    &__title {
+        margin-bottom: 31px;
+    }
+
+    &__text {
+        font-weight:300;
+        margin-bottom: 48px;
+    }
+
+    &__benefits {
+        // list-style: none;
+    }
+
+
+
+    &__description {
+        display: none;
+        padding-left: $listpadding;
+        margin-bottom: 40px;
+    }
+
+    &__element {
+        position: relative;
+        padding-left: $listpadding;
+        margin-bottom: 10px;
+
+        &::before {
+            content:"";
+            width:19px;
+            height: 19px;
+            background: #807979;
+            border-radius: 50%;
+            position: absolute;
+            top:50%;
+            left:0;
+            transform: translateY(-50%);
+        }
+    }
+
+//! MOBILE
+    @media screen and (max-width: $mediasize) {
+        $listpadding: 50px;
+
+        &__image {
+            display: none;
+        }
+        &__description {
+            display: block;
+            padding-left: $listpadding;
+        }
+
+        &__element {
+            padding-left: $listpadding;
+            &::before {
+                content:"";
+                background: url(../images/about-mobile.png);
+                width:45px;
+                height: 7px;
+                border-radius: 0;
+                // transform: translate(-50%,-50%);
+            }
+        }
+
+
+
+
+    }
+}
+
+
+
+
+

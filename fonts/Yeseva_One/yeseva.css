@@ -1,0 +1,5 @@
+@font-face {
+  font-family: "yeseva";
+  src: local(""), url("./YesevaOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+}

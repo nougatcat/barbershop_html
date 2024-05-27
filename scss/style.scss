@@ -1,0 +1,117 @@
+@import url("../fonts/Roboto/roboto.css");
+@import url("../fonts/Yeseva_One/yeseva.css");
+@import url("../fonts/Inter/inter.css");
+
+
+
+*, 
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$mediasize: 1220px;
+$mainbg: #faeee9; 
+
+
+html,
+body {
+    font: 400 24px 'inter', sans-serif;
+}
+
+header {
+    background-color: #f9e3d3;
+    min-height: 100px;
+    padding-bottom: 178px;
+}
+
+main {
+    background-color: $mainbg;
+    min-height: 100px;
+    padding-top: 145px;
+    padding-bottom: 95px;
+}
+
+footer {
+    background-color: #f9e3db;
+    min-height: 100px;
+    padding-top: 134px;
+    padding-bottom: 90px;
+}
+
+.content {
+    max-width: 1067px;
+    margin: 0 auto;
+}
+
+
+.title {
+    font: 400 43px 'yeseva';
+    letter-spacing: 0.15em;
+}
+
+
+.button {
+    display: inline-block;
+    width: 270px;
+    line-height: 59px;
+    background: #F89D88;
+    text-align: center;
+    border-radius: 30px;
+    color:#f9e3db;
+    text-transform: uppercase; /*КАПСОМ ПИШЕТСЯ*/
+    text-decoration: none;
+    font-weight: 700;
+}
+
+//! MOBILE
+@media screen and (max-width: 1220px) {
+
+    html, body {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    header {
+        height:927px;
+        padding:0;
+
+        content {
+            position: relative;
+        }
+
+    }
+
+    .content {
+        max-width: 381px;
+        height: 100%;
+    }
+
+    .title {
+        font: 300 35px 'yeseva';
+    }
+
+    .button {
+        width:183px;
+        line-height:42px;
+        
+    }
+}
+
+
+@import "./header";
+@import "./navigation";
+@import "./about";
+@import "./services";
+@import "./stock";
+@import "./crew";
+@import "./review";
+@import "./footer";
+
+// @import "./mobile"; перенесено в другие файлы
+
+// @media screen and (max-width: 950px) {
+
+// }

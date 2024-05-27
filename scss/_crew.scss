@@ -1,0 +1,61 @@
+
+
+.crew {
+    margin-bottom: 283px;
+
+    &_profession {
+        font-size: 22px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 300;
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        padding-top: 57px;
+    
+    }
+
+    // &__element {
+    // }
+
+    &__image {
+        margin-bottom: 36px;
+        border-radius: 50%;
+    }
+
+    // &__name {
+    // }
+
+    &__title {
+        margin-bottom: 57px;
+    }
+
+
+//! MOBILE
+    @media screen and (max-width: $mediasize) {
+        &__element div {
+            font-size: 18px;
+            font-weight: 300;
+        }
+    
+        &__list {
+            max-width: 186px;
+            column-gap:18px; //(186-150)/2 в соотв с макетом
+            margin: 0 auto;
+            justify-content: space-around;
+            overflow:hidden;
+            width:200px;
+        }
+    
+        &__element {
+            width: 200px;
+        }
+
+        &__image {
+            width: 150px;
+        }
+    }
+}

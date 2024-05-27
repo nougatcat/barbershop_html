@@ -1,0 +1,71 @@
+
+.head {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__data {
+        flex-basis: 513px;
+        letter-spacing: 0.15em;
+        color: #2c1708;
+
+        a {
+            letter-spacing: normal;
+        }
+    }
+
+    &__name {
+        font-family: 'yeseva';
+        font-size: 45px;
+        line-height: 53px;
+        margin-bottom: 28px;
+    }
+
+    &__tagline {
+        font-size: 30px;
+        // letter-spacing: 0.15em;
+        margin-bottom: 8px;
+
+    }
+
+    &__deception {
+        font-size: 22px;
+        margin-bottom: 55px;
+    }
+
+    &__image {
+        margin-right: 4%;
+    }
+
+//! MOBILE
+    @media screen and (max-width: $mediasize) {
+        flex-direction: column-reverse;
+        height: 100%; //расстянем до низа
+        justify-content: flex-start; //прижмем вниз
+        padding-bottom: 200px;
+    
+        &__name {
+            display:none;
+        }
+
+        &__tagline {
+            font-size: 1rem; //18px
+        }
+
+        &__deception {
+            font-size: 1rem;
+        }
+
+        &__image {
+            margin: 0;
+            width: 245px;
+        }
+
+        &__data {
+            text-align: center;
+            flex-basis: auto;
+            letter-spacing: 0.03em;
+        }
+    }    
+}
